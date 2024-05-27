@@ -1,0 +1,29 @@
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\keil5\ARM\ARMCC\Bin'
+Build target 'HAL_06_LCD'
+compiling main.c...
+../Src/main.c(216): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      HAL_UART_Transmit_DMA(&huart1,buff,strlen(buff)) ; 
+../Src/main.c(225): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+           HAL_UART_Transmit_DMA(&huart1,error,strlen(error)) ;
+../Src/main.c(228): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+           HAL_UART_Transmit_DMA(&huart1,Busy,strlen(Busy)) ; 
+../Src/main.c(263): warning:  #1295-D: Deprecated declaration gpio_init - give arg types
+  void gpio_init() ;
+../Src/main.c(280): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			Money_C += 0.50 ;
+../Src/main.c(281): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			Money_V += 0.50 ;
+../Src/main.c(285): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if(Money_C >= 0.50)
+../Src/main.c(286): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			Money_C -= 0.50 ;
+../Src/main.c(287): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if(Money_V >=0.50)
+../Src/main.c(288): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			Money_V -= 0.50 ;
+../Src/main.c: 10 warnings, 0 errors
+linking...
+Program Size: Code=21868 RO-data=5088 RW-data=48 ZI-data=1960  
+FromELF: creating hex file...
+"HAL_06_LCD\HAL_06_LCD.axf" - 0 Error(s), 10 Warning(s).
+Build Time Elapsed:  00:00:03
