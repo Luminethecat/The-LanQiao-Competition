@@ -234,10 +234,12 @@ void Key_Process(void)
 	else  ;
 }
 
-
+__IO uint32_t SpeedTick = 0 ;
 void ERROR_Process(void)
 {
 	Data.Speed = ((PA7_F*2*PI*Data.R)/(100*Data.K)) ;
+	if(uwTick - SpeedTick<200) return;
+	SpeedTick = uwTick ;
 	Data.Old_Speed = Data.Speed ;
 		if((PA7_F<8000) && (PA7_F>4000))
 	{ 
@@ -439,13 +441,23 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		if(Data.Old_Speed == Data.Speed)
 		{
 			z++ ;
-			if(z % 20 == 0)
+			if(z == 20)
 			{
 				if(Data.Mode)
-					Data.Max_H = Data.Speed ;
-				else Data.Max_L = Data.Speed ;
+				{
+					if(Data.Speed>Data.Max_H)
+					      Data.Max_H = Data.Speed ;
+				    z = 0;
+				}
+				else 
+				{
+					if(Data.Speed>Data.Max_L)
+					      Data.Max_L = Data.Speed ;
+				    z = 0;
+				}
 			}
 		}
+		else z =0;
 		if(ERROR_Flag)
 		{
 			if(PA7_F == oled_F)

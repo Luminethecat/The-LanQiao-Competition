@@ -248,17 +248,17 @@
         <Ww>
           <count>18</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Data.Ctrl</ItemText>
+          <ItemText>Data.LCD_Show</ItemText>
         </Ww>
         <Ww>
           <count>19</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Data.LCD_Show</ItemText>
+          <ItemText>CCC</ItemText>
         </Ww>
         <Ww>
           <count>20</count>
           <WinNumber>1</WinNumber>
-          <ItemText>CCC</ItemText>
+          <ItemText>z</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
