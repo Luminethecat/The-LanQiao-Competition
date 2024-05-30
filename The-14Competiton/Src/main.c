@@ -457,7 +457,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 				}
 			}
 		}
-		else z =0;
+		else z = 0;
 		if(ERROR_Flag)
 		{
 			if(PA7_F == oled_F)
@@ -465,7 +465,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 				y++ ;
 				if(y % 5 ==0)
 				{
-					__HAL_TIM_SetCounter(&htim2,0);//ÇåÁã¼ÆÊý
+					__HAL_TIM_SetCounter(&htim2,0);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					HAL_TIM_IC_Start_IT(&htim3,TIM_CHANNEL_2) ;
 					HAL_TIM_IC_Start_IT(&htim3,TIM_CHANNEL_1) ;
 					y = 0;
